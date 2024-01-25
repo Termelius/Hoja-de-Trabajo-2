@@ -1,6 +1,5 @@
 package debugging;
 
-import java.util.Vector;
 import Stack.PostFixStack;
 
 public class TryingOperations {

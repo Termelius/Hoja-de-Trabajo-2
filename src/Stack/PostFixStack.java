@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.Vector;
 
-public class PostFixStack<G> {
+public class PostFixStack<G> implements IStack<G>{
 
     private Vector<G> stack;
 
@@ -20,7 +20,7 @@ public class PostFixStack<G> {
         return item;
     }
 
-    public G top() {
+    public G Top() {
         return stack.lastElement();
     }
 
