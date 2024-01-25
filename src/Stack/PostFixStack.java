@@ -27,5 +27,5 @@ public class PostFixStack<G> {
     public boolean isEmpty() {
         return stack.isEmpty();
     }
-    
+
 }
