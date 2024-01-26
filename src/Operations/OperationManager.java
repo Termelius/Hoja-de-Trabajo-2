@@ -7,22 +7,18 @@ public class OperationManager {
         switch (item) {
             case '+':
                 result = stack.pop() + stack.pop();
-                System.err.println(result);
                 stack.push(result);
                 break;
             case '-':
                 result = stack.pop() - Character.getNumericValue(stack.pop());
-                System.out.println(result);
                 stack.push(result);
                 break;
             case '*':
                 result = stack.pop() * stack.pop();
-                System.out.println(result);
                 stack.push(result);
                 break;
             case '/':
                 result = stack.pop() / stack.pop();
-                System.out.println(result);
                 stack.push(result);
                 break;
             case ' ':

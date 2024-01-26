@@ -38,6 +38,5 @@ public class TryingOperations {
                     break;
             }
         }
-        System.out.println("Result: " + result);
     }
 }
