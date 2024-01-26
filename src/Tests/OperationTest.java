@@ -11,7 +11,6 @@ public class OperationTest {
     public void testOperationPostFix() {
         PostFixStack<Integer> stack = new PostFixStack<Integer>();
         String postfix = "12+4*3+";
-        int result = 0;
         for (int i = 0; i < postfix.length(); i++) {
             OperationManager.OperationPostFix(stack, postfix.charAt(i));
         }
