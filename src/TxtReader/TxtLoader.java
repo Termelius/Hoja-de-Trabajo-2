@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtLoader {
-    private String path = "Data/datos.txt";
+    private String path = "datos.txt";
 
     public String[] loadFile() {
         List<String> lines = new ArrayList<>();
