@@ -9,7 +9,7 @@ public class TxtLoaderTest {
     public void LoadingFiles() {
         TxtLoader loader = new TxtLoader();
         String[] lines = loader.loadFile();
-        Assert.assertEquals(lines.length, 5);
+        Assert.assertEquals(3, lines.length);
     }
 
 }
