@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtLoader {
-    private String path = "datos.txt";
+    private String path;
+
+    public TxtLoader(String filePath) {
+        this.path = filePath;
+    }
 
     public String[] loadFile() {
         List<String> lines = new ArrayList<>();
@@ -18,9 +22,10 @@ public class TxtLoader {
                 lines.add(line);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error al cargar el archivo " + path + ": " + e.getMessage());
         }
 
         return lines.toArray(new String[0]);
     }
 }
+

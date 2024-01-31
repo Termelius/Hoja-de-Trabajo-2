@@ -1,13 +1,12 @@
 package Operations;
 import Stack.MyStack;
 
-
 public class OperationManager {
     public static void OperationPostFix(MyStack<Integer> stack, Character item){
-        String allusecharacters = "+-*/0123456789";
-        
+        String allUseCharacters = "+-*/0123456789";
+
         int result = 0;
-        if (allusecharacters.contains(item.toString())){
+        if (allUseCharacters.contains(item.toString())){
             switch (item) {
                 case '+':
                     result = stack.pop() + stack.pop();
@@ -22,20 +21,23 @@ public class OperationManager {
                     stack.push(result);
                     break;
                 case '/':
-                    try {
-                        result = stack.pop() / stack.pop();
-                    } catch (ArithmeticException e) {
-                        throw new ArithmeticException("Division por cero, esto no se puede, nono ");
+                    int divisor = stack.pop();
+                    if (divisor != 0) {
+                        result = stack.pop() / divisor;
+                        stack.push(result);
+                    } else {
+                        throw new ArithmeticException("División por cero en la expresión.");
                     }
+                    break;
                 case ' ':
                     break;
                 default:
-                    stack.push(Character.getNumericValue(item)); // push 
+                    stack.push(Character.getNumericValue(item));
                     break;
             }
         } 
         else {
-            throw new IllegalArgumentException("El caracter no es valido");
+            throw new IllegalArgumentException("El caracter '" + item + "' no es válido en la expresión.");
         }
     }
 }
