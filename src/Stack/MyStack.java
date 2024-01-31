@@ -2,11 +2,11 @@ package Stack;
 
 import java.util.Vector;
 
-public class PostFixStack<G> implements IStack<G>{
+public class MyStack<G> implements UVGStack<G>{
 
     private Vector<G> stack;
 
-    public PostFixStack() {
+    public MyStack() {
         stack = new Vector<G>();
     }
 

@@ -2,12 +2,12 @@ package Tests;
 
 import org.junit.Test;
 import org.junit.Assert;
-import Stack.PostFixStack;
+import Stack.MyStack;
 
 public class StackTest {
     @Test
     public void testTop() {
-        PostFixStack<Integer> stack = new PostFixStack<Integer>();
+        MyStack<Integer> stack = new MyStack<Integer>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -16,7 +16,7 @@ public class StackTest {
 
     @Test
     public void testPop() {
-        PostFixStack<Integer> stack = new PostFixStack<Integer>();
+        MyStack<Integer> stack = new MyStack<Integer>();
         stack.push(1);
         stack.push(2);
         stack.push(3);

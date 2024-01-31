@@ -1,10 +1,10 @@
 package debugging;
 
-import Stack.PostFixStack;
+import Stack.MyStack;
 
 public class TryingOperations {
     public static void main(String[] args){
-        PostFixStack<Integer> stack = new PostFixStack<Integer>();
+        MyStack<Integer> stack = new MyStack<Integer>();
 
         // Test String
         String postfix = "12+4*3+";

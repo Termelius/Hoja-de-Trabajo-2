@@ -1,8 +1,9 @@
 package Operations;
-import Stack.PostFixStack;
+import Stack.MyStack;
+
 
 public class OperationManager {
-    public static void OperationPostFix(PostFixStack<Integer> stack, Character item){
+    public static void OperationPostFix(MyStack<Integer> stack, Character item){
         String allusecharacters = "+-*/0123456789";
         
         int result = 0;

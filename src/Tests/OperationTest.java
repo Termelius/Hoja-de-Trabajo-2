@@ -1,6 +1,6 @@
 package Tests;
 
-import Stack.PostFixStack;
+import Stack.MyStack;
 import Operations.OperationManager;
 
 import org.junit.Test;
@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class OperationTest {
     @Test
     public void testOperationPostFix() {
-        PostFixStack<Integer> stack = new PostFixStack<Integer>();
+        MyStack<Integer> stack = new MyStack<Integer>();
         String postfix = "12+4*3+";
         for (int i = 0; i < postfix.length(); i++) {
             OperationManager.OperationPostFix(stack, postfix.charAt(i));
