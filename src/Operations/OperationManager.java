@@ -1,12 +1,27 @@
 package Operations;
+
 import Stack.MyStack;
 
+/**
+ * Operaciones de evaluación
+ */
 public class OperationManager {
-    public static void OperationPostFix(MyStack<Integer> stack, Character item){
+
+    /**
+     * Postfix
+     * 
+     * @param stack se realizan y almacenan las operaciones
+     * @param item Representa la operación
+     * 
+     * @throws ArithmeticException se divide por cero
+     * @throws IllegalArgumentException el caracter no es valido
+     */
+    public static void OperationPostFix(MyStack<Integer> stack, Character item) {
         String allUseCharacters = "+-*/0123456789";
 
         int result = 0;
-        if (allUseCharacters.contains(item.toString())){
+
+        if (allUseCharacters.contains(item.toString())) {
             switch (item) {
                 case '+':
                     result = stack.pop() + stack.pop();
@@ -35,8 +50,7 @@ public class OperationManager {
                     stack.push(Character.getNumericValue(item));
                     break;
             }
-        } 
-        else {
+        } else {
             throw new IllegalArgumentException("El caracter '" + item + "' no es válido en la expresión.");
         }
     }

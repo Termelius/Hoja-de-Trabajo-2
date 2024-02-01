@@ -6,13 +6,26 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Leer el archivo Txt
+ */
 public class TxtLoader {
     private String path;
 
+    /**
+     * Constructor
+     *
+     * @param filePath La ruta del archivo txt
+     */
     public TxtLoader(String filePath) {
         this.path = filePath;
     }
 
+    /**
+     * lee el txt y lo devuelve como un array
+     *
+     * @return Un array de cadenas del txt
+     */
     public String[] loadFile() {
         List<String> lines = new ArrayList<>();
 
@@ -28,4 +41,3 @@ public class TxtLoader {
         return lines.toArray(new String[0]);
     }
 }
-

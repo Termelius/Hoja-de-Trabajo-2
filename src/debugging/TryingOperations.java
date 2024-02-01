@@ -2,13 +2,22 @@ package debugging;
 
 import Stack.MyStack;
 
+/**
+ * Postfix
+ */
 public class TryingOperations {
-    public static void main(String[] args){
+
+    /**
+     * Realiza las operaciones y muestra los resultados 
+     *
+     * @param args argumentos
+     */
+    public static void main(String[] args) {
         MyStack<Integer> stack = new MyStack<Integer>();
 
-        // Test String
         String postfix = "12+4*3+";
         int result = 0;
+
         for (int i = 0; i < postfix.length(); i++) {
             switch (postfix.charAt(i)) {
                 case '+':
